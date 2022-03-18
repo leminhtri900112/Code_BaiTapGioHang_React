@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 export default class SanPhamChiTiet extends Component {
   render() {
-    let { thumbnail_url, name, price } = this.props.sanPhamChiTiet;
+    let { thumbnail_url, name, price, short_description } =
+      this.props.sanPhamChiTiet;
     return (
       <div className="container mt-5">
         <h4>Thông tin chi tiết:</h4>
@@ -19,6 +20,7 @@ export default class SanPhamChiTiet extends Component {
             <p className="card-text text-danger">
               Giá: {price.toLocaleString()} đồng
             </p>
+            <p>{short_description}</p>
           </div>
         </div>
       </div>
